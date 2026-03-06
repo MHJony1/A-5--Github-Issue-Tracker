@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Github Issue Tracker || Login</title>
+
+  
+    <!-- tailwind+daisy  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body class="">
+  <div class="flex min-h-screen items-center justify-center bg-gray-100 mx-auto">
+    <div class="w-full max-w-md bg-white px-8 py-6 rounded-lg shadow-lg">
+
+      <div class="flex flex-col justify-center items-center pt-8">
+        <img class="" src="./assets/github-logo.png" alt="">
+        <h2 class="text-2xl font-bold pt-5">GitHub Issues Tracker</h2>
+        <p class=" text-gray-400">Sign in to manage your issues</p>
+      </div>
+
+
+      <!-- form -->
+     <div class="space-y-2 mt-4">
+      <div class="mb-2">
+      <label class="block text-md font-semibold mb-1">Username</label>
+       <input onclick="fillUsername()" id="username-container" type="text" placeholder="Enter Username" class="w-full border border-gray-200 rounded-lg p-2 outline-none focus:border-blue-500" />
+       <span class="text-sm font-medium text-blue-600 mt-2">Default: admin</span>
+     </div>
+
+    <div class="mb-6">
+     <label class="block text-md font-semibold mb-1">Password</label>
+      <input onclick="fillPassword()" id="password-container" type="password" placeholder="Enter Password" class="w-full border border-gray-200 rounded-lg p-2 outline-none focus:border-blue-500" />
+      <span class="text-sm font-medium text-blue-600 mt-2">Default: admin123</span>
+    </div>
+
+      <button onclick="signIn()" class="w-full btn btn-primary rounded-lg transition mb-3">
+            Sign In
+      </button>
+    
+    </div>
+    
+     </div>
+
+  </div>
+
+  <script src="./script/index.js"></script>
+</body>
+</html>
