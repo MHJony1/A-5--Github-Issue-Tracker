@@ -31,27 +31,27 @@
             src="./assets/github-logo.png" />
         </div>
       </div>
-    <p class="  text-2xl font-semibold">Github Issue Tracker</p>
+    <p class=" text-xl md:text-2xl font-semibold">Github Issue Tracker</p>
   </div>
   <div class="flex gap-2">
     <div class="relative">
       <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
       <input  type="text"  placeholder="Search Issues..." class="input input-bordered w-24 bg-gray-100 md:w-auto search-box"/>
     </div>
-    <button class="btn btn-primary"><i class="fa-solid fa-plus"></i>New Issue</button>
+    <button class="btn btn-primary">Search</button>
   </div>
 </div>
   </header>
 
   <main class="w-10/12 mx-auto mt-8">
      <!-- toggle button section -->
-      <div class="bg-white rounded-lg shadow-sm  px-3 py-5 flex gap-2 mb-4">
+      <div class="bg-white rounded-lg shadow-sm  px-4 py-5 flex justify-center items-center sm:justify-start sm:items-start  gap-2 mb-4">
         <button onclick="toggleBtn('allBtn')" id="allBtn" class="btn btn-primary text-md">All</button>
         <button onclick="toggleBtn('openBtn')" id="openBtn" class="btn  text-md">Open</button>
         <button onclick="toggleBtn('closedBtn')" id="closedBtn" class="btn  text-md border-2">Closed</button>
       </div>
     <!-- issues count section -->
-     <div class="bg-white rounded-lg shadow-sm  px-3 py-5 mb-2">
+     <div class="bg-white rounded-lg shadow-sm  px-4 py-5 mb-2">
       <div class="flex justify-between items-center">
         <div class="flex items-center gap-2">
           <img class="bg-violet-100 p-2 rounded-full" src="./assets/Aperture.png" alt="">
@@ -61,12 +61,13 @@
           </div>
         </div>
 
-        <div class="flex items-center gap-4">
+        
+        <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
           <div class="flex items-center gap-2">
            <span class="w-3 h-3 bg-green-500 rounded-full"></span>
            <span class="text-md font-medium">Open</span>
-        </div>
-        <div class="flex items-center gap-2">
+          </div>
+          <div class="flex items-center gap-2">
            <span class="w-3 h-3 bg-purple-500 rounded-full"></span>
            <span class="text-md font-medium">Closed</span>
         </div>
@@ -76,8 +77,8 @@
      </div>
 
      <!-- load issue card section -->
-      <div class="card card-body shadow-2xl">
-        <div id="cardContainer" class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+      <div class="card card-body shadow-2xl bg-white">
+        <div id="cardContainer" class="grid grid-cols-1 sm:grid-cols-4 gap-4 ">
           <!-- Dynamic cards will be added here -->
 
           <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow">
