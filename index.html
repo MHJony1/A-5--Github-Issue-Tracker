@@ -19,7 +19,7 @@
 </head>
 <body class="">
   <div class="flex min-h-screen items-center justify-center bg-gray-100 mx-auto">
-    <div class="w-full max-w-md bg-white px-8 py-6 rounded-lg shadow-lg">
+    <div class="w-full max-w-md bg-white px-8 py-3 rounded-lg shadow-lg">
 
       <div class="flex flex-col justify-center items-center pt-8">
         <img class="" src="./assets/github-logo.png" alt="">
@@ -42,11 +42,23 @@
       <span class="text-sm font-medium text-blue-600 mt-2">Default: admin123</span>
     </div>
 
-      <button onclick="signIn()" class="w-full btn btn-primary rounded-lg transition mb-3">
-            Sign In
-      </button>
-    
+      <button onclick="signIn()" class="w-full btn text-white btn-primary rounded-lg transition mb-3">Sign In</button>
     </div>
+
+    <div class="relative flex py-2 items-center">
+                <div class="grow border-t border-gray-200"></div>
+                <span class="shrink mx-4 text-gray-400 text-sm font-semibold">OR</span>
+                <div class="grow border-t border-gray-200"></div>
+            </div>
+
+              <div class="text-center mb-4">
+                <p class="text-xs text-slate-500 mb-3">Demo Credentials:</p>
+                    <div class="bg-gray-100 py-4 rounded-lg">
+                      <p class="text-sm text-gray-600"><strong>Username:</strong> admin</p>
+                     <p class="text-sm text-gray-600"><strong>Password:</strong> admin123</p>
+                    </div>
+              </div>
+            </div>
 
      </div>
 

@@ -4,8 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github Issue Tracker || Home</title>
+  <!-- tailwind+daisy  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+
+    <link rel="stylesheet" href="./style/style.css">
 </head>
-<body>
-  <h1>Hi Bangladesh</h1>
+<body class="bg-gray-100">
+  <header>
+    <!-- navbar design -->
+     <div class="navbar flex justify-between items-center bg-base-100 shadow-sm">
+  <div class="flex items-center gap-2">
+    <div tabindex="0" role="button" class="btn-ghost btn-circle avatar">
+        <div class="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS Navbar component"
+            src="./assets/github-logo.png" />
+        </div>
+      </div>
+    <p class="  text-2xl font-semibold">Github Issue Tracker</p>
+  </div>
+  <div class="flex gap-2">
+    <div class="relative">
+      <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+      <input  type="text"  placeholder="Search Issues..." class="input input-bordered w-24 bg-gray-100 md:w-auto search-box"/>
+    </div>
+    <button class="btn btn-primary"><i class="fa-solid fa-plus"></i>New Issue</button>
+  </div>
+</div>
+  </header>
+
+  <main class="w-10/12 mx-auto mt-8 space-y-4">
+     <!-- toggle button section -->
+      <div class="bg-white rounded-lg shadow-sm  px-3 py-5 flex gap-2">
+        <button class="btn btn-primary text-md">All</button>
+        <button class="btn  text-md">Open</button>
+        <button class="btn  text-md border-2">Closed</button>
+      </div>
+    <!-- issues count section -->
+     <div class="bg-white rounded-lg shadow-sm  px-3 py-5">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <img class="bg-violet-100 p-2 rounded-full" src="./assets/Aperture.png" alt="">
+          <div>
+            <h2 class="text-lg font-bold">50 Issues</h2>
+            <p class="text-sm text-gray-400">Track and manage your project issues</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2">
+           <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+           <span class="text-md font-medium">Open</span>
+        </div>
+        <div class="flex items-center gap-2">
+           <span class="w-3 h-3 bg-purple-500 rounded-full"></span>
+           <span class="text-md font-medium">Closed</span>
+        </div>
+        </div>
+      </div>
+
+     </div>
+
+  </main>
 </body>
 </html>
