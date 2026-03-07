@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-gray-100">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="./style/style.css">
 </head>
-<body class="bg-gray-100">
+<body>
   <header>
     <!-- navbar design -->
      <div class="navbar flex justify-between items-center bg-base-100 shadow-sm">
@@ -43,20 +43,20 @@
 </div>
   </header>
 
-  <main class="w-10/12 mx-auto mt-8 space-y-4">
+  <main class="w-10/12 mx-auto mt-8">
      <!-- toggle button section -->
-      <div class="bg-white rounded-lg shadow-sm  px-3 py-5 flex gap-2">
-        <button class="btn btn-primary text-md">All</button>
-        <button class="btn  text-md">Open</button>
-        <button class="btn  text-md border-2">Closed</button>
+      <div class="bg-white rounded-lg shadow-sm  px-3 py-5 flex gap-2 mb-4">
+        <button onclick="toggleBtn('allBtn')" id="allBtn" class="btn btn-primary text-md">All</button>
+        <button onclick="toggleBtn('openBtn')" id="openBtn" class="btn  text-md">Open</button>
+        <button onclick="toggleBtn('closedBtn')" id="closedBtn" class="btn  text-md border-2">Closed</button>
       </div>
     <!-- issues count section -->
-     <div class="bg-white rounded-lg shadow-sm  px-3 py-5">
+     <div class="bg-white rounded-lg shadow-sm  px-3 py-5 mb-2">
       <div class="flex justify-between items-center">
         <div class="flex items-center gap-2">
           <img class="bg-violet-100 p-2 rounded-full" src="./assets/Aperture.png" alt="">
           <div>
-            <h2 class="text-lg font-bold">50 Issues</h2>
+            <h2 class="text-lg font-bold"><span id="issue-count">50</span> Issues</h2>
             <p class="text-sm text-gray-400">Track and manage your project issues</p>
           </div>
         </div>
@@ -75,6 +75,13 @@
 
      </div>
 
+     <!-- load issue card section -->
+      <div>
+        
+      </div>
+
   </main>
+
+  <script src="./script/home.js"></script>
 </body>
 </html>
