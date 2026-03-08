@@ -55,7 +55,7 @@ function filterIssues(status){
   }
   const filteredIssues = allIssues.filter(issue => issue.status === status);
   displayIssueCards(filteredIssues);
-  
+
   hideLoading();
   }, 50);
 
@@ -139,10 +139,15 @@ function displayIssueCards(cards) {
 
     cardContainer.appendChild(issueCard);
   })
-}
-
-  
+} 
 loadIssueCards();
+
+// search Issue card 
+function searchIssueCard() {
+  const searchValue = document.getElementById("input-search").value.toLowerCase();
+  const filteredIssues = allIssues.filter(issue => issue.title.trim().toLowerCase().includes(searchValue) || issue.description.trim().toLowerCase().includes(searchValue));
+  displayIssueCards(filteredIssues);
+}
 
 
 
