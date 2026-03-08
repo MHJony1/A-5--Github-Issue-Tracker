@@ -46,9 +46,9 @@
   <main class="w-10/12 mx-auto mt-8">
      <!-- toggle button section -->
       <div class="bg-white rounded-lg shadow-sm  px-4 py-5 flex justify-center items-center sm:justify-start sm:items-start  gap-2 mb-4">
-        <button onclick="toggleBtn('allBtn')" id="allBtn" class="btn btn-primary text-md">All</button>
-        <button onclick="toggleBtn('openBtn')" id="openBtn" class="btn  text-md">Open</button>
-        <button onclick="toggleBtn('closedBtn')" id="closedBtn" class="btn  text-md border-2">Closed</button>
+        <button onclick="toggleBtn('allBtn'); filterIssues('all')" id="allBtn" class="btn btn-primary text-md">All</button>
+        <button onclick="toggleBtn('openBtn'); filterIssues('open')"  id="openBtn" class="btn  text-md">Open</button>
+        <button onclick="toggleBtn('closedBtn'); filterIssues('closed')" id="closedBtn" class="btn  text-md border-2">Closed</button>
       </div>
     <!-- issues count section -->
      <div class="bg-white rounded-lg shadow-sm  px-4 py-5 mb-2">
@@ -76,6 +76,12 @@
 
      </div>
 
+           <!-- loading spinner -->
+             <div id="loadingSpinner" class="h-[60vh] flex hidden justify-center items-center">
+              <span class="loading loading-spinner loading-xl"></span>
+             </div>
+         
+
      <!-- load issue card section -->
       <div class="card card-body shadow-2xl bg-white">
         <div id="cardContainer" class="grid grid-cols-1 sm:grid-cols-4 gap-4 ">
@@ -89,7 +95,7 @@
               </div>
         </div>
 
-         
+            
       </div>
 
               

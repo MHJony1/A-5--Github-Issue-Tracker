@@ -15,14 +15,50 @@ function toggleBtn(id){
   selected.classList.remove("btn-soft");
 }
 
+  //3. spinner loading
+    
+    function showLoading(){
+      loadingSpinner.classList.remove('hidden');
+      cardContainer.innerHTML = '';
+    }
+    function hideLoading(){
+      loadingSpinner.classList.add('hidden');
+    }
+
 
 
 // dynamic card creation from API
+let allIssues = [];
 const cardContainer = document.getElementById("cardContainer");
+const issueCount = document.getElementById("issue-count");
+
 async function loadIssueCards() {
+  showLoading();
   const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues");
   const data = await res.json();
-  displayIssueCards(data.data);
+
+  allIssues = (data.data);
+
+  displayIssueCards(allIssues);
+  hideLoading();
+
+}
+
+function filterIssues(status){
+  showLoading();
+  
+  setTimeout(() => {
+      if(status === 'all'){
+    displayIssueCards(allIssues);
+    hideLoading();
+    return;
+  }
+  const filteredIssues = allIssues.filter(issue => issue.status === status);
+  displayIssueCards(filteredIssues);
+  
+  hideLoading();
+  }, 50);
+
 }
 
 //card info
@@ -43,6 +79,9 @@ async function loadIssueCards() {
 // }
 
 function displayIssueCards(cards) {
+  if(issueCount){
+    issueCount.innerText = cards.length;
+  }
   cardContainer.innerHTML = "";
   cards.forEach((card) => {
     // console.log(card);
@@ -102,6 +141,7 @@ function displayIssueCards(cards) {
   })
 }
 
+  
 loadIssueCards();
 
 
